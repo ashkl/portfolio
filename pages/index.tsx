@@ -1,6 +1,6 @@
 import { Box, Center, useColorModeValue } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import ProfileCard from './Components/ProfileCard/ProfileCard'
+import ProfileCard from '../Components/ProfileCard/ProfileCard'
 
 const Home: NextPage = () => {
 

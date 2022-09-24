@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
-import Layout from './layout'
+import Layout from '../layout'
 import "./index.css"
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
