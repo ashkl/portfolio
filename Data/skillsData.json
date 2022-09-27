@@ -1,0 +1,67 @@
+{
+    "Programming":[
+        {
+            "name": "JavaScript"
+        },
+        {
+            "name": "TypeScript"
+        },
+        {
+            "name": "Java"
+        },
+        {
+            "name": "HTML"
+        }
+    ],
+    "frameworksAndLibraries":[
+        {
+            "name": "REACT"
+        },
+        {
+            "name": "Redux"
+        },
+        {
+            "name": "Node.js"
+        },
+        {
+            "name": "Next.js"
+        },
+        {
+            "name": "Express"
+        },
+        {
+            "name": "Chakra UI"
+        },
+        {
+            "name": "Bootstrap"
+        },
+        {
+            "name": "Material UI"
+        },
+        {
+            "name": "Spingboot - Java"
+        }
+    ],
+    "databases": [
+        {
+            "name": "MongoDB"
+        },
+        {
+            "name": "MySQL"
+        }
+    ],
+    "misc": [
+        {
+            "name": "Git"
+        },
+        {
+            "name": "Jira"
+        },
+        {
+            "name": "Confluence"
+        },
+        {
+            "name": "TeamCity"
+        }
+    ]
+}

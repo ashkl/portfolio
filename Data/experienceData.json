@@ -1,0 +1,64 @@
+[
+    {
+        "title": "QA Consulting",
+        "date": "April 2021 - October 2021",
+        "desc": "Leading provider of consulting services to commercial, financial organisations and government departments.",
+        "projects": null,
+        "points":[
+            {
+                "num":1,
+                "text":"Six month rapid course on Java, Springboot, JavaScript and REACT by completeing courses as well projects."
+            },
+            {
+                "num":2,
+                "text":"Created a cinema webiste using the MERN stack with a fully functioning payments system as well as backend to store movies and bookings."
+            }
+        ]
+    },
+    {
+        "title": "Infosys",
+        "date": "October 2021 - Present",
+        "desc": "Provides software development, maintenance and independent validation services to companies in finance, insurance, manufacturing and other domains.",
+        "projects": [
+            {
+                "title": "Ecolite Project",
+                "points": [
+                    {
+                        "num":1,
+                        "text": "Founded a project/web application with other colleagues to help combat carbon emissions of websites by informing clients how much carbon footprint their website produces"
+                    },
+                    {
+                        "num": 2,
+                        "text": "Designed and developed the frontend of the web application using Next.js and REACT while trying to use sustainable design practices"
+                    },
+                    {
+                        "num": 3,
+                        "text": "Supervised interns and guided them on setting up, maintaining and developing on the frontend."
+                    }
+                ]
+            },
+            {
+                "title": "NatWest",
+                "points": [
+                    {
+                        "num":1,
+                        "text": "Managed multiple REACT based frontend platforms to ensure smooth user experience for both customers and brokers"
+                    },
+                    {
+                        "num": 2,
+                        "text": "Modified existing codebase by adding new functionality to help customers make clear and informed decisions regarding mortgage applications."
+                    },
+                    {
+                        "num": 3,
+                        "text": "Delivered critical updates promptly after new products were launched that needed to be updated on the frontend so users won’t be misinformed"
+                    },
+                    {
+                        "num": 4,
+                        "text": "Built and deployed platforms to production as well helping other teams deployment and maintainence"
+                    }
+                ]
+            }
+        ],
+        "points": null
+    }
+]
