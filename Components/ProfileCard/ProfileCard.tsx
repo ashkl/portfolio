@@ -11,6 +11,7 @@ import {
   Tooltip,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import Experience from "../Resume/Experience";
 import Skills from "../Resume/Skills";
 
@@ -31,6 +32,7 @@ export default function ProfileCard() {
   return (
     <>
       <Stack
+        as={motion.div}
         borderWidth="1px"
         borderRadius="none"
         borderColor={useColorModeValue("black", "white")}
@@ -124,7 +126,7 @@ export default function ProfileCard() {
               </Button>
             </Tooltip>
           </Stack>
-          <Tabs w={{ sm: "100%", md: "620px" }} variant={"line"}>
+          <Tabs colorScheme={"red"} isFitted isLazy variant={"line"}>
             <TabList>
               <Tab>SKILLS</Tab>
               <Tab>EXPERIENCE</Tab>

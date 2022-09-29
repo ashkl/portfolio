@@ -22,6 +22,9 @@ export default function Skills({}: Props) {
               py={1}
               bg={useColorModeValue("gray.200", "gray.800")}
               fontWeight={"400"}
+              borderWidth={"1px"}
+              borderColor={useColorModeValue("black", "red")}
+              borderRadius={"none"}
             >
               {item.name}
             </Badge>
@@ -37,6 +40,9 @@ export default function Skills({}: Props) {
               py={1}
               bg={useColorModeValue("gray.200", "gray.800")}
               fontWeight={"400"}
+              borderWidth={"1px"}
+              borderColor={useColorModeValue("black", "red")}
+              borderRadius={"none"}
             >
               {item.name}
             </Badge>
@@ -52,6 +58,9 @@ export default function Skills({}: Props) {
               py={1}
               bg={useColorModeValue("gray.200", "gray.800")}
               fontWeight={"400"}
+              borderWidth={"1px"}
+              borderColor={useColorModeValue("black", "red")}
+              borderRadius={"none"}
             >
               {item.name}
             </Badge>
@@ -67,6 +76,9 @@ export default function Skills({}: Props) {
               py={1}
               bg={useColorModeValue("gray.200", "gray.800")}
               fontWeight={"400"}
+              borderWidth={"1px"}
+              borderColor={useColorModeValue("black", "red")}
+              borderRadius={"none"}
             >
               {item.name}
             </Badge>
