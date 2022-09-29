@@ -3,11 +3,16 @@ import {
   Button,
   Heading,
   Stack,
+  Tab,
+  TabList,
+  TabPanels,
+  Tabs,
   Text,
   Tooltip,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Link from "next/link";
+import Experience from "../Resume/Experience";
+import Skills from "../Resume/Skills";
 
 export default function ProfileCard() {
   const onResumeClick = (e: any) => {
@@ -30,7 +35,6 @@ export default function ProfileCard() {
         borderRadius="none"
         borderColor={useColorModeValue("black", "white")}
         w={{ sm: "100%", md: "720px" }}
-        height={{ sm: "30rem", md: "20rem" }}
         direction={{ base: "column", md: "row" }}
         bg={useColorModeValue("white", "black")}
         boxShadow={"2xl"}
@@ -65,32 +69,6 @@ export default function ProfileCard() {
           >
             Software programmer with experience in web application development.
           </Text>
-          <Stack align={"center"} justify={"center"} direction={"row"} mt={6}>
-            <Badge
-              px={2}
-              py={1}
-              bg={useColorModeValue("gray.200", "gray.800")}
-              fontWeight={"400"}
-            >
-              #REACT
-            </Badge>
-            <Badge
-              px={2}
-              py={1}
-              bg={useColorModeValue("gray.200", "gray.800")}
-              fontWeight={"400"}
-            >
-              #Frontend
-            </Badge>
-            <Badge
-              px={2}
-              py={1}
-              bg={useColorModeValue("gray.200", "gray.800")}
-              fontWeight={"400"}
-            >
-              #Node
-            </Badge>
-          </Stack>
           <Stack
             width={"100%"}
             mt={"2rem"}
@@ -146,6 +124,16 @@ export default function ProfileCard() {
               </Button>
             </Tooltip>
           </Stack>
+          <Tabs w={{ sm: "100%", md: "620px" }} variant={"line"}>
+            <TabList>
+              <Tab>SKILLS</Tab>
+              <Tab>EXPERIENCE</Tab>
+            </TabList>
+            <TabPanels>
+              <Skills />
+              <Experience />
+            </TabPanels>
+          </Tabs>
         </Stack>
       </Stack>
     </>

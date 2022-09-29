@@ -1,7 +1,6 @@
 import { Box, Center, Stack, useColorModeValue } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import ProfileCard from "../Components/ProfileCard/ProfileCard";
-import Experience from "../Components/Resume/Experience";
 import ThemeSwitch from "../Components/Utl/ThemeSwitch";
 
 const Home: NextPage = () => {
@@ -21,7 +20,6 @@ const Home: NextPage = () => {
           <ThemeSwitch />
         </Stack>
       </Center>
-      <Experience />
     </Box>
   );
 };
