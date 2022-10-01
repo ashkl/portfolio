@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         justifyContent={"center"}
         alignItems="center"
         textAlign="center"
-        minHeight={"96vh"}
+        minHeight={"100vh"}
         className="profile-card"
       >
         <Stack>
