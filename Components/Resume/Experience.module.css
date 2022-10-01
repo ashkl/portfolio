@@ -20,7 +20,7 @@
 }
 
 .container ul li {
-    margin: 40px;
+    margin: 40px 20px;
     position: relative;
 }
 
@@ -28,8 +28,8 @@
     content: '';
         position: absolute;
         top: 0;
-        left: -40px;
-        width: 0px;
+        left: -20px;
+        width: 1px;
         height: 100%;
         border: 1px solid red;
 }
@@ -43,10 +43,25 @@
     left: -5px;
 }
 
-.container ul li>span:before {
+.container ul li > span:before {
     top: -2px;
 }
 
 .container ul li > span:after {
     top: 100%
+}
+
+.container ul li div span {
+    position: absolute;
+    font-size: 12px;
+}
+
+.container ul li div span:first-child {
+    left: -80px;
+    top: -5px
+}
+
+.container ul li div span:last-child {
+    left: -80px;
+    bottom: -5%;
 }

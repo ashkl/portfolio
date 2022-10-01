@@ -22,9 +22,9 @@ export default function Experience() {
                     {item.title}
                   </Heading>
                   <Text textAlign={"left"}>{item.desc}</Text>
-                  <div className="dates">
-                    <span>{item.date.start}</span>
+                  <div>
                     <span>{item.date.end}</span>
+                    <span>{item.date.start}</span>
                   </div>
                 </li>
               ))}

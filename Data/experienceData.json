@@ -2,8 +2,8 @@
     {
         "title": "QA Consulting",
         "date": {
-            "start": "April 2021",
-            "end": "October 2021"
+            "start": "APR 2021",
+            "end": "OCT 2021"
         },
         "desc": "Leading provider of consulting services to commercial, financial organisations and government departments.",
         "projects": null,
@@ -21,8 +21,8 @@
     {
         "title": "Infosys",
         "date": {
-            "start": "October 2021",
-            "end": "Present"
+            "start": "OCT 2021",
+            "end": "CURRENT"
         },
         "desc": "Provides software development, maintenance and independent validation services to companies in finance, insurance, manufacturing and other domains.",
         "projects": [
