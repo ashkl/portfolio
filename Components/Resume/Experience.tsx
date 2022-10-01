@@ -21,7 +21,9 @@ export default function Experience() {
                   >
                     {item.title}
                   </Heading>
-                  <Text textAlign={"left"}>{item.desc}</Text>
+                  <Text textAlign={"left"} fontSize={"sm"} pt={2}>
+                    {item.desc}
+                  </Text>
                   <div>
                     <span>{item.date.end}</span>
                     <span>{item.date.start}</span>
