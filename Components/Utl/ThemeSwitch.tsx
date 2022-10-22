@@ -12,7 +12,7 @@ export default function ThemeSwitch({}: Props) {
         fontSize={"sm"}
         borderWidth="1px"
         rounded={"none"}
-        width={"25%"}
+        width={{ sm: "100%", md: "25%" }}
         borderColor={useColorModeValue("black", "white")}
         bg={useColorModeValue("white", "black")}
         color={useColorModeValue("black", "white")}
