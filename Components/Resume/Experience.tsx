@@ -12,7 +12,7 @@ export default function Experience() {
             {ExpData.slice(0)
               .reverse()
               .map((item) => (
-                <li>
+                <li key={Math.random()}>
                   <span></span>
                   <Heading
                     textAlign={"left"}
