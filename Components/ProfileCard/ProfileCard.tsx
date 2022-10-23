@@ -12,6 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Experience from "../Resume/Experience";
 import Skills from "../Resume/Skills";
 
@@ -30,7 +31,15 @@ export default function ProfileCard() {
   };
 
   return (
-    <>
+    <Stack
+      p={3}
+      display="flex"
+      justifyContent={"center"}
+      alignItems="center"
+      textAlign="center"
+      minHeight={"100vh"}
+      className="profile-card"
+    >
       <Stack
         as={motion.div}
         borderWidth="1px"
@@ -97,15 +106,7 @@ export default function ProfileCard() {
               Download Résumé
             </Button>
 
-            <Tooltip
-              label="UNDER DEVELOPMENT"
-              shouldWrapChildren
-              rounded={"none"}
-              borderWidth={"1px"}
-              flex={1}
-              bg={"red"}
-              color={"white"}
-            >
+            <Link href="/projects">
               <Button
                 flex={1}
                 fontSize={"sm"}
@@ -120,11 +121,10 @@ export default function ProfileCard() {
                 }}
                 _hover={{ borderColor: "red" }}
                 onClick={(e) => e.currentTarget.blur()}
-                isDisabled
               >
                 Personal Projects
               </Button>
-            </Tooltip>
+            </Link>
           </Stack>
           <Tabs colorScheme={"red"} isFitted isLazy variant={"line"}>
             <TabList>
@@ -138,6 +138,6 @@ export default function ProfileCard() {
           </Tabs>
         </Stack>
       </Stack>
-    </>
+    </Stack>
   );
 }

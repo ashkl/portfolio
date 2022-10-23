@@ -19,20 +19,7 @@ export default function Layout({ children }: any) {
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <main>
           <Box minH="100vH" bg={useColorModeValue("gray.100", "black")}>
-            <Center
-              px={3}
-              display="flex"
-              justifyContent={"center"}
-              alignItems="center"
-              textAlign="center"
-              minHeight={"100vh"}
-              className="profile-card"
-            >
-              <Stack>
-                {children}
-                <ThemeSwitch />
-              </Stack>
-            </Center>
+            {children}
           </Box>
         </main>
       </div>
