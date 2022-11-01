@@ -8,22 +8,19 @@ import {
   ModalContent,
   ModalHeader,
   ModalOverlay,
-  useDisclosure,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
+import { AreaType } from "./AreaType";
 
 type Props = {};
 
 export default function KustomUI({}: Props) {
   const [scrolled, setScrolled] = useState(0);
   const [areaMap, setAreaMap] = useState<any>([]);
-  const [homeKomp, setHomeKomp] = useState(false);
-  const [musicKomp, setMusicKomp] = useState(false);
-  const [carInfoKomp, setCarInfoKomp] = useState(false);
-  const [serverInfoKomp, setServerInfoKomp] = useState(false);
-  const [diskUsageKomp, setDiskUsageKomp] = useState(false);
-  const [controlPanelKomp, setControlPanelKomp] = useState(false);
-  const [ashflixKomp, setAshflixKomp] = useState(false);
+  const [modalHeader, setModalHeader] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", scrollProgress);
@@ -46,22 +43,17 @@ export default function KustomUI({}: Props) {
     setScrolled(scrollLen);
   };
 
-  const HomeInfoModal = () => {
-    setHomeKomp(true);
-  };
-
   const handleClose = () => {
-    setHomeKomp(false);
+    setShowModal(false);
   };
 
   const firstPageMapArea: object[] = [
     {
       width: "90%",
-      height: "7%",
+      height: "4.25%",
       left: "5%",
-      top: "6%",
+      top: "8.75%",
       style: { background: "rgba(255, 0, 0, 0.5)" },
-      onMouseDown: HomeInfoModal,
     },
     {
       width: "90%",
@@ -69,7 +61,6 @@ export default function KustomUI({}: Props) {
       left: "5%",
       top: "13.5%",
       style: { background: "rgba(255, 0, 0, 0.5)" },
-      onMouseDown: HomeInfoModal,
     },
     {
       width: "90%",
@@ -77,7 +68,6 @@ export default function KustomUI({}: Props) {
       left: "5%",
       top: "20.9%",
       style: { background: "rgba(255, 0, 0, 0.5)" },
-      onMouseDown: HomeInfoModal,
     },
     {
       width: "90%",
@@ -85,7 +75,6 @@ export default function KustomUI({}: Props) {
       left: "5%",
       top: "44%",
       style: { background: "rgba(255, 0, 0, 0.5)" },
-      onMouseDown: HomeInfoModal,
     },
     {
       width: "38%",
@@ -93,7 +82,6 @@ export default function KustomUI({}: Props) {
       left: "5%",
       top: "54%",
       style: { background: "rgba(255, 0, 0, 0.5)" },
-      onMouseDown: HomeInfoModal,
     },
     {
       width: "50%",
@@ -101,7 +89,6 @@ export default function KustomUI({}: Props) {
       left: "45%",
       top: "54%",
       style: { background: "rgba(255, 0, 0, 0.5)" },
-      onMouseDown: HomeInfoModal,
     },
     {
       width: "90%",
@@ -109,9 +96,21 @@ export default function KustomUI({}: Props) {
       left: "5%",
       top: "69%",
       style: { background: "rgba(255, 0, 0, 0.5)" },
-      onMouseDown: HomeInfoModal,
     },
   ];
+
+  const onMapClick = (area: AreaType, index: number) => {
+    const mapNum = index + 1;
+    switch (mapNum) {
+      case 1:
+        setModalHeader("Home");
+        break;
+      case 2:
+        setModalHeader("Music");
+        break;
+    }
+    setShowModal(true);
+  };
 
   const ImageMapComponent = React.useMemo(
     () => (
@@ -122,6 +121,7 @@ export default function KustomUI({}: Props) {
           .padStart(2, "0")}.jpeg`}
         map={areaMap}
         style={{ maxHeight: "95vh" }}
+        onMapClick={onMapClick}
       />
     ),
     [scrolled]
@@ -143,13 +143,13 @@ export default function KustomUI({}: Props) {
           }}
         >
           <Box padding={3}>{ImageMapComponent}</Box>
-          <Modal isCentered isOpen={homeKomp} onClose={handleClose}>
+          <Modal isCentered isOpen={showModal} onClose={handleClose}>
             <ModalOverlay
               bg="blackAlpha.300"
               backdropFilter="blur(10px) hue-rotate(90deg)"
             />
             <ModalContent>
-              <ModalHeader>Home Komp</ModalHeader>
+              <ModalHeader>{modalHeader} Komponent</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
                 <ReactPlayer
@@ -161,6 +161,10 @@ export default function KustomUI({}: Props) {
                   muted={true}
                   volume={0}
                 />
+                <Text color={useColorModeValue("black", "white")} py={3}>
+                  Software programmer with experience in web application
+                  development.
+                </Text>
               </ModalBody>
             </ModalContent>
           </Modal>
