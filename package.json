@@ -12,11 +12,14 @@
     "@chakra-ui/react": "^2.2.9",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@qiuz/react-image-map": "^1.1.8",
     "framer-motion": "^6.5.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-player": "^2.11.0",
+    "sass": "^1.55.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
